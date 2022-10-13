@@ -4,25 +4,25 @@
       <label for="nis">Nomor Induk Siswa :</label><br>
       <input class="form-control" type="number" name="nis" placeholder="Ex. 12003102" /><br>
 
-      <label for="nama">Nama Lengkap :</label><br>
-      <input class="form-control" type="text" name="nama" placeholder="Ex. Egi" /><br>
+      <label for="nama_lengkap">Nama Lengkap :</label><br>
+      <input class="form-control" type="text" name="nama_lengkap" placeholder="Ex. Egi" /><br>
 
-      <label for="tanggal_lahir">Jenis Kelamin :</label><br>
-      <input class="form-control" type="text" name="jenis_kelamin" /><br>
+      <label for="jenis_kelamin">Jenis Kelamin :</label><br>
+      <input class="form-control" type="text" name="jenis_kelamin" placeholder="Ex Jenis kelamin" /><br>
 
-      <label for="nilai">Kelas :</label><br>
+      <label for="kelas">Kelas :</label><br>
       <input class="form-control" type="text" name="kelas" placeholder="Ex. 80.56" /><br>
 
-      <label for="nilai">Nilai Kehadiran :</label><br>
+      <label for="nilai_kehadiran">Nilai Kehadiran :</label><br>
       <input class="form-control" type="number" name="nilai_kehadiran" placeholder="Ex. 80.56" /><br>
 
-      <label for="nilai">Nilai Tugas :</label><br>
+      <label for="nilai_tugas">Nilai Tugas :</label><br>
       <input class="form-control" type="number" name="nilai_tugas" placeholder="Ex. 80.56" /><br>
 
-      <label for="nilai">Nilai PTS :</label><br>
+      <label for="nilai_pts">Nilai PTS :</label><br>
       <input class="form-control" type="number" name="nilai_pts" placeholder="Ex. 80.56" /><br>
 
-      <label for="nilai">Nilai PAS :</label><br>
+      <label for="nilai_pas">Nilai PAS :</label><br>
       <input class="form-control" type="number" name="nilai_pas" placeholder="Ex. 80.56" /><br>
       <br>
       <input class="btn btn-sm btn-success" type="submit" name="simpan" value="Simpan Data" />
@@ -45,7 +45,7 @@
 
       if( isset($_POST["simpan"]) ){
             $nis = $_POST["nis"];
-            $nama = $_POST["nama"];
+            $nama_lengkap = $_POST["nama_lengkap"];
             $jenis_kelamin = $_POST["jenis_kelamin"];
             $kelas = $_POST["kelas"];
             $nilai_kehadiran = $_POST["nilai_kehadiran"];
@@ -56,7 +56,7 @@
             // CREATE - Menambahkan Data ke Database
             $query = "
                   INSERT INTO datanilai VALUES
-                  ('$nis', '$nama', '$jenis_kelamin', '$kelas' , '$nilai_kehadiran' , '$nilai_tugas' , '$nilai_pts' , '$nilai_pas');
+                  ('$nis', '$nama_lengkap', '$jenis_kelamin', '$kelas' , '$nilai_kehadiran' , '$nilai_tugas' , '$nilai_pts' , '$nilai_pas');
             ";
 
            
